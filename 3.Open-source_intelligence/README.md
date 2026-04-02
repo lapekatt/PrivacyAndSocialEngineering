@@ -38,12 +38,35 @@ Search for ***joe@gmail.com*** on Have I been Pwned, and...
 <br>
 
 In how many <strong>data breaches</strong> and <strong>pastes</strong> can this email be found?
+321
 
 What are the <strong>compromised data types</strong> in the following services? (answer each separately)
 
 - <strong>Bell</strong>
+Email addresses
+Geographic locations
+IP addresses
+Job titles
+Names
+Passwords
+Phone numbers
+Spoken languages
+Survey results
+Usernames
+
 - <strong>Drizly</strong>
+Dates of birth
+Device information
+Email addresses
+IP addresses
+Names
+Passwords
+Phone numbers
+Physical addresses
+
 - <strong>Robinhood</strong>
+Email addresses
+(and names)
 
 </details>
 
@@ -63,6 +86,9 @@ On the other hand, some other services distribute all breach data content, as pa
 As the information is highly valuable for some entities, these entities will pay for the data, and platform providers will run the services until law enforcement will shut them down.
 
 1. **Find at least three of these paid services and list them.**
+Joker’s Stash
+BriansClub
+Infraud Organization
 
 *Consider the problems of breach data as follows*. 
 
@@ -80,6 +106,29 @@ Could it change the way we think about privacy, and how we use services and prio
 Or do we make a compromise, and try to remove only the most damaging breaches from the internet?
 
 2. **Write a short answer (150-200 words) of your thoughts. There might not be a correct or incorrect answer, but you need to make arguments.**
+Knowing that your data has been leaked is important, to be able to
+minimise harm, such as by deactivating payment cards and changing
+passwords and keys that may have got compromised. However, it could
+be a legal requirement for companies to inform their customers
+directly.
+
+The potential drawback is about companies unwilling to report
+breaches. However, damages and criminal liability for not promptly
+informing customers could be enough to force companies to comply.
+
+At least in the EU, customers must be informed about what data is
+collected about them, which means it is known what data could have
+been leaked. If payment card details, passwords, keys or similar may
+have leaked, the uncertainty bears little weight. Companies may
+downplay the impact, but can be required to link a governmental site
+explaining consequences of differents kinds of leaks (and people
+should be educated on the matter anyhow).
+
+With this legislation in place, sites such as Have I Been Pwned are
+still useful for checking whether my friend or business partner were
+pwned (and if so, whether they use BadSite.com). For those matters, I
+think privacy bears more weight. There are better means for checking
+the reliability of business partners.
 
 ---
 
@@ -88,10 +137,12 @@ Or do we make a compromise, and try to remove only the most damaging breaches fr
 There have been a few cases of compromised systems due to hardcoded passwords and API keys accidentally ending up in production code. [Google offers some advice on how to handle such information more securely](https://cloud.google.com/docs/authentication/api-keys)
 
 1.  Use Hex-Rays decompiler via [Dogbolt](https://dogbolt.org/) to check out if you can find a **plaintext hardcoded password** from the provided compiled C code file called **secretKey**. 
+Vulture35Vulture
 
-2. As a second part, there is a secret **Activation Key** for you to figure out, which has validation arguments that can be seen with some closer inspection of the decompiler.
+3. As a second part, there is a secret **Activation Key** for you to figure out, which has validation arguments that can be seen with some closer inspection of the decompiler.
+59347970
 
-3. As a third and last part, there is a **Super secret password** that is hardcoded but has been "encrypted" with a secret hash.
+4. As a third and last part, there is a **Super secret password** that is hardcoded but has been "encrypted" with a secret hash.
 
 
 In case the site is under maintenance, there is a HexRaysOutput file, which has the full output of the decompilation process.
@@ -107,7 +158,10 @@ After completing the task, you have five items to return.
 
 Return a valid <strong>Password</strong> and  
 <strong>One valid activation key</strong> and  
-The <strong>instructions</strong> on how to create the rest of the activation keys, since there are multiple valid ones.  
+The <strong>instructions</strong> on how to create the rest of the activation keys, since there are multiple valid ones.
+
+For the 270 values in the interval 59347700..59347970, chose those whose digit sum is 44 (seen in the BinaryNinja and Hex-Ray decompilations, or in hex in Ghidra)
+
 Also, return the <strong>plaintext version of the super secret password</strong> and <strong>the name of the hash function</strong> it was created with.   
 You can use for example https://crackstation.net/ to decode the password.
 
