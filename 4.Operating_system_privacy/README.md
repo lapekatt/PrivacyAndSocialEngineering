@@ -53,8 +53,121 @@ What **security risks** and **privacy implications** there are from bringing thi
 <br
 
 - For each device separately describe two situations where the privacy and/or security of the user can be compromised
+
+* Ring drone
+
+I am working with some confidential papers at my desk when I notice I
+am late for picking up my children from daycare. I'll be away only
+half an hour and nobody else is at home, so I don't bother putting
+them back in the safe. My wife comes home early to plan decorations
+for the upcoming party and uses the drone to look around. The
+compromised drone gets some critical information.
+
+The camera footage includes our anti-burglary devices and burglars who
+bought some of it can now see what valuables there are and how to
+avoid having the alarm go off.
+
+* Roomba vacuum cleaner
+
+The vacuum cleaner is set to be controlled through the home automation
+system, which gets compromised. Now burglars can use its camera to
+check what valuables there are in the appartment.
+
+While doing its shores alone at home, the cleaner gets stuck and the
+overheating sensors are dysfunctional. It catches fire.
+
+* Echo speakers
+
+The speakers are compromised and records speech not directed at them,
+including some confidential meetings. The transcript is used for
+blackmailing.
+
+My teenage dother has some severe psychological problems. Now she
+starts getting advertisements for all kinds of related drugs. They
+continuously remind her of her problems and her state worsens.
+
+* Ring doorbell
+
+My friend, a doctor, receives paperless immigrants to give medical
+care they don't get at the hospital. The police gets a warrant for the
+camera footage, as there was a case of drug delivery in the
+neighbourhood. This compromises his reception,clients and activism.
+
+Burglars get their hands on the camera footage through the Wi-Fi
+router and can plan burglaries for times when nobody is at home.
+ 
+* Astro robot
+
+My wife likes to spend some time naked after having taken a bath. The
+robot was in a corner, presumably inactive, but seemingly not this
+time, as she starts finding herself on the internet.
+
+The robot has been presented to our friends, but has learnt to
+recognise also other visitors and keeps track of the whos and whens.
+It also records conversations, especially when certain persons are
+present, and uploads the data to the SuPo team, who got the necessary
+tools and the mission from their U.S. colleagues. After all, the
+information gathering is legal, as exchange of information is
+necessary for the safety of the country - and there is upcoming
+legislation making home privacy not hinder contraspionage (never mind
+it hasn't been enacted yet).
+
+
 - Find and list 5 CVEs[^1] for IOT devices such as those above. Give a short explanation of the CVEs. (You can choose the devices and CVEs yourself and the CVEs can be patchable)
+
+CVE-2025-32876 (2025-06-20)
+CVE-2025-32877 (2025-06-20)
+CVE-2025-32878 (2025-06-20)
+CVE-2025-32879 (2025-06-20)
+CVE-2025-32880 (2025-06-20)
+
+The Coros Pace 3 smartwatches (up through 3.0808.0) use BLE legacy
+pairing, which use an easily guessed STK key and in the case of these
+products, a known TK key (to allow "Just Works"). Thus an attacker in
+Bluetooth range can eavesdrop on the connection.
+
+The rest of the CVS batch describes attacks that don't just eavesdrop.
+It seems one could connect and send arbitrary commands if no other
+device is connected. Moreover, updates are done over Wi-Fi, with
+some checks over HTTPS without validating the certificate and firmware
+downloaded without encryption.
+
+The manufacturer was notified 2025-03-14, fix planned for the end of
+the year, public disclosure 2025-04-15, patches in July/August.
+
+
+CVE-2021-27289 (2025-04-15)
+
+A Zigbee smart home kit (gateway, door sensor, motion sensor) has an
+improperly implemented anti-replay mechanism, allowing Zigbee devices
+to resend captured packages (by using a sufficently large sequence
+number), such as simple commands and notifications.
+
+
+CVE-2020-28952 (2021-03-09)
+
+The Athom Homey smart home devices used a widely known test key
+instead of intended unique ones to encrypt inter-device communication.
+
+
+CVE-2026-0629 (2026-01-16/2026-01-21)
+
+An auhentication bypass in the password recovery function of the VIGI
+InSight Sx45 web cameras allows an attacker on the local area network
+to reset the admin password and thus gain full control.
+
+
+CVE-2015-2886 (2017-04-10)
+
+The cloud service for iBaby's video baby monitors uses the devices'
+serial numbers for access, provided one is authenticated to the
+service. Knowing the number or brute-forcing the 8×2⁴ number space,
+one can access camera details and the recorded videos. After
+notification, the company disabled direct logins, making brute-forcing
+infeasible.
+
 - In the U.S., there is a so-called [third-party doctrine](https://en.wikipedia.org/wiki/Third-party_doctrine), which essentially gives the government access to all of your data without warrants, if you have given consent for a service provider to collect your data. Does this apply in Finland? If not, is it prevented by the Finnish legislation or European Union regulation?
+
 
 A great place to search for the CVEs is [Mitre](https://cve.mitre.org/index.html). Their CVE list search is an amazing tool. [Tips for the search](https://cve.mitre.org/find/search_tips.html)
 
