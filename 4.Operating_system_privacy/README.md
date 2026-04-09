@@ -159,15 +159,24 @@ to reset the admin password and thus gain full control.
 
 CVE-2015-2886 (2017-04-10)
 
-The cloud service for iBaby's video baby monitors uses the devices'
-serial numbers for access, provided one is authenticated to the
-service. Knowing the number or brute-forcing the 8×2⁴ number space,
-one can access camera details and the recorded videos. After
-notification, the company disabled direct logins, making brute-forcing
-infeasible.
+The cloud service for iBaby's video baby monitors allows any authenticated
+user to view details for all cameras, provided they know the correct file
+path, which can be constructed if you know the devices' serial number or 
+brute-force the 8×2⁴ number space. This allows seeing camera details and 
+the recorded videos. After notification, the company disabled direct logins,
+making brute-forcing infeasible.
 
 - In the U.S., there is a so-called [third-party doctrine](https://en.wikipedia.org/wiki/Third-party_doctrine), which essentially gives the government access to all of your data without warrants, if you have given consent for a service provider to collect your data. Does this apply in Finland? If not, is it prevented by the Finnish legislation or European Union regulation?
 
+Finland does not have the same concept of "expectation of privacy", so 
+there is no exact equivalent. The terms used in the constitution 
+(article 10) are "yksityiselämä" and "kotirauha", which are protected in 
+most circumstances, while most info is up to other legislation, including 
+the EU regulation 2016/67. National legislation covers law enforcement's
+right to get information (notably laws 872/2011 and 616/2019), and the 
+police have quite a mandate to interpret what info they need for preventing
+or investigate crime, and they are allowed to use most of thir findings in
+unrelated investigations,
 
 A great place to search for the CVEs is [Mitre](https://cve.mitre.org/index.html). Their CVE list search is an amazing tool. [Tips for the search](https://cve.mitre.org/find/search_tips.html)
 
