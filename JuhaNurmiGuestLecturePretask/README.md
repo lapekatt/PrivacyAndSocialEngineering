@@ -36,7 +36,7 @@ bridges and especially ephemeral snowflake proxies are intended to
 be harder to find, and too many emerging for effective censorship.
 As most of the tor network is outside the oppressive jurisdiction,
 shutting down relays is hard. For less oppressive regimes, there is
-usually no legal ground for interfering with the tor relays.
+usually no legal ground for interfering with most tor relays.
 
 ## Task 4: OnionShare creates onion services
 ### Question 4: What features does OnionShare provide?
