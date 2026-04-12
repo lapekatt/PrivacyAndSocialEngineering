@@ -50,7 +50,8 @@ usually no legal ground for interfering with most tor relays.
 * Dropbox functionality
 * Anonymous chat room functionality (requires Javascript)
 * Shared key for restricting access to actual services (called
-  "private" in the documentation)
+  "private" in the documentation); a new key is generated for each
+  non-public instance and has to be be shared by other means.
 * Can work as a "normal" web server hosting static content on
   the tor network, optionally including external content
   (javascript, CSS etc., possibly from the usual suspects)
