@@ -164,27 +164,51 @@ First, you need to identify the mail service provider by looking `MX` records e.
 
 > viii. If you attempt to spoof some of these domain owners, in which cases the messages are not delivered regardless of the content? (Who has configured their servers correctly (also with DKIM and SPF) with `reject` policy?)
 
-<details>
+<!--<details>-->
 <summary><strong>Question Recap:</strong></summary>
 <br>
 
 <strong>i.</strong> What methods have been used on the message to convince the user to make an action and how the information is likely obtained?  
 
+- The From: field has been set to the correct name of the bank (S-Pankki Finland) and the associated email address has the username "fraudpevention", which corresponds to the issue told in the message. The actual domain name, although misspelled, is close to the bank's domain name. (Until 2003 domain names under .fi had to conform to the owner's proper name or trademark, which would probably have hindered this particular name. There are still restrictions, but they do not seem to be enforced.)
+- Action is said to be needed urgently, to give less time for thought. Access to one's bank account being suspended is bad enough, permanent suspension would be a catastroph.
+- The verification address looks similar to how such addresses could look.
+<br/>
+
+- The page likely asks for your credentials. They could be entered into a usual HTML form with action POST to a script at spanki.fi, which would add a line to a file or store them in a database.
+
 <strong>ii.</strong> Who owns the domain `spanki.fi` related to the previous message? How about the domains `s-panki.fi` or `spankki.fi`?  
+
+- whois and host say that the domain spanki.fi is "not fould". It was probably unregistered after Traficom was notified of the scam. It might also have expired, since the mail was sent three years ago.
+- s-panki.fi and spankki.fi are owned by "Suomen Osuuskauppojen Keskuskunta", which seems to be the proper name of the company group.
+- s-pankki is owned by S-Pankki Oy, which seems to be the proper name of the bank.
+- Oddly enough, www.s-panki.fi, spankki.fi and s-pankki fi are on different IP blocks, each with a single IP. However, the others redirect ("302 Found") to the correctly spelled www.s-pankki.fi. Is this intended to protect against DoS attacks?
 
 <strong>iii.</strong> Is anyone capable to register free domain names, even similar to known brands? Take a brief look for registration requirements and process for `.fi` domains. Think about new registrations of S-Pankki domains.  
 
+- .fi is stricter than many other top domains, at least formally. Only persons and organisations with certain ties to Finland are allowed to register .fi domains, the domain names may not be based on names or trademarks of others and they may not be registered for onward sale. However, enforcement seems to be lax, as .fi domain names are regularly traded and spanki.fi should have been an obvious fraud - the current regulation of these points have been in effect for decennia, and violations have likewise been common. For .com, .nu and many other domains, registration regulation is lax also in theory.
+
 <strong>iv.</strong> Why it is so important pay attention to exact URLs and <strong>why can we trust</strong> the URLs in the first hand? Only a short explanation about the trust is required.  
+
+- Most importantly to the exact domain name, which means you need to know the syntax of URLs. If you know what URL you are trying to reach, you can check that the URL indeed is the right one. HTTPS certificates are usually only for the domain name, which means that the phishers of spanki.fi would have been able to get a certificate for their web site. Actually, looking at a given domain name may not always help, as Cyrillic ћіа.example may be mistaken for hia.example, Greek ναρ.example for vap.example and corn for com (depending on fonts and resolution). Most traditional top domains disallow mixing scripts or restrict domain names to a certain script to lessen the problem, but you need to know the top domain policies to be sure (.fi for one allows only certain letters). Why trust URLs? The domain owner can control what hosts are allowed and how they are run – but as DNS records are mostly not signed, DNS spoofing is possible, unless the certificates are checked.
 
 <strong>v.</strong> Look for the sender from the .eml message. How the message has been sent? You should be able to identify the service.  
 
+- The sender SMTP host appears to be emkei.cz (89.187.129.24), which seems to be a legit server, and the sender seems to be a local user, although the user id 33 is odd. On Debian it is www-data, which hints at a breach of the web server or its scripts. Or is the email server for the spanki.fi domain, receiving outgoing email by the web interface? The mail was forwarded to VE1EUR01FT094.mail.protection.outlook.com, appearantly with original SMTP HELO domain name spanki.fi. The email is then apparently handled by a number of cooperating servers, ending up at HE1PR05MB4713.eurprd05.prod.outlook.com. Either this is the server of the receipient or the head of the message has been removed.
+
 <strong>vi.</strong> What headers are telling about DMARC, DKIM and SPF checks  
+
+- Received-SPF: "None…" and Authentication-Results: "spf=none…dkim=none…dmarc=none"
 
 <strong>vii.</strong> Now, do you think that these checks (especially the failure of them) will likely lead for previous mail to be deliver into spam rather than content on email server which has only SpamAssassin?  
 
+- Spamassassin does not give enough spam points for the mail to end up in the junk folder on most servers. The default install on Debian says "X-Spam-Status: No, score=0.8 required=5.0". Of course, there could be other tests adding spam points, or missing SPF and the phishing phrases tested for could actually give spam points (here both give 0.0 points).
+
 <strong>viii.</strong> If you attempt to spoof some of these domain owners, in which cases the messages are not delivered regardless of the content? (Who has configured their servers correctly (also with DKIM and SPF) with `reject` policy?)  
 
-</details>
+- I don't find any dmarc records. All except poppankki have spf records, though.
+
+<!--</details>-->
 
 ### Task 1B) Combining knowledge
 
@@ -198,15 +222,25 @@ Also, read it carefully.
 After making your conclusions, you could ask ChatGPT what it thinks about the message. 
 Remember to take it **with a grain of salt** whatever it is saying, and verify from true sources.
 
-<details>
+<!--<details>-->
 <summary><strong>Answer the following:</strong></summary>
 <br>
 
 > i. Will the message be delivered into the spam more likely because of the content rather than sending entity?
 
+- As by the default rules and with a range of blacklists blocked, only 4,9 spam points were earned by header issues (where the Reply-To: address was seemed as the biggest offender), while the content earned 7.7 points. The former is just below the default threshold of 5, while the latter is clearly above it and might be classified as spam also by quite conservative rules.
+
 > ii. Identify at least five different psychological manipulation techniques what have been used in the message. 
 
-</details>
+- Cancer triggers compassion.
+- The titles/professions might be seen as trustworthy.
+- The emigration history probably is there for similar reasons.
+- A history as donor is intended to make the person seem as a good one, whom you shouldn't distrust. Hardworking may have the same connotations for some.
+- The inspiration by the American who donated a billion plays on that we all should be good and can make a difference; the reader may feel part of donating this billion.
+- Only a few months of remaining lifetime make the arrangements urgent.
+- 50 % of the USD 2.5M is playing on the readers greed.
+
+<!--</details>-->
 
 ### Task 1C) Building a credential-stealing site
 
