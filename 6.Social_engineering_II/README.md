@@ -34,6 +34,41 @@ You can use, but not limited to, the following thoughts.
 
 > You need to write a short essay, around 500 words. If you want, it can be longer.
 
+I want to know where the Palestinian activist Mahmood lives. I have reason to believe it is in a certain municipality, but the address is secret and I don't know where he works, if he works at all. However, I know he has a thirteen-year old daughter, Nadeen, and as the family moved in from Sweden and all the Swedish-speaking of that age in the municipality go to the same school, I think I could find him through her.
+
+I think the easiest way get my hands on confidential info on pupils is by being a teacher. I won't get that position, but I could send a young person posing as stand-in teacher. A home-economics teacher is probably working most of the time in their class, so people might not have seen them being present, and they probably have at least half of the pupils.
+
+The "stand-in" goes to work early to prepare for the day's lessons. Most school days begin at 9, but especially optional subjects start at 8, so there will be people there who could let her in. She – I chose a she, as that's more common, a he could have met goodwill, but also perhaps too many questions – will tell about her stand-in position and ask for the days scheme and list of pupils if available. If they print those out, she might even get her hands on a logged-in computer. She would have to be a little bit lost (not too odd for somebody her age, not being a routined teacher) to get help from the first ones to ask, instead of going to those who should take care of stand-ins and risk them knowing no stand-in had been booked.
+
+She is lucky! She didn't get to the logged-in computer, but she got a folder with the teacher's schedule, some instructions – and lists of all the teacher's pupils and photos of most. Nadeen is among them. There doesn't seem to be too many pupils that look Palestinian, so she is probably easy to recognise. The stand-in also gets keys (the classrooms are locked) and she has a free period before lunch, when she could go to the teachers' office without anybody wondering and try to get into some desktop computer. She should probably leave before lunch, as the real teacher may have lunch with her colleagues. Better to be gone by then.
+
+She now has ample time, but she shouldn't be seen by too many, she is having classes after all. Before leaving for the classroom, she checks the schedules posted on the office wall to find where Nadeen's class will spend today's lessons. If one of those is vacant, she will want to look into it. On the way to the household economy class she goes to the toilet and stays there until the lessons have started. Most classrooms are busy, but the one where Nadeen will have French in the afternoon is vacant.
+
+The classrooms have big screens, as supplement to the whiteboard. Using the usb port it isn't too hard to connect the one in the classroom to a web page with a custom meeting app that records the "meeting" while having the all-black video in full screen. She schedules this meeting to start just before the afternoon class and hopes whatever the teacher will do with the screen doesn't interfere with the timing. These screens have so many functions that no teacher will be surprised for it to behave oddly, so worst case is it just getting reset.
+
+She also passed by a screen stating one should contact a certain phone number to get the screen activated, seemingly it wasn't yet configured. She will do that before lunch, and hopes she can get her own software running on that screen also.
+
+There are indeed desktop computers in the teachers' office, and nobody is there now. She inserts her keylogger/keyboard/4G device where the keyboard connects to the computer. Getting there requires some effort, and the dust tells nobody does that too often.
+
+After having had the screen configured, she is done. She has it show a news page from the school's web site for the time being. She has copied the relevant parts of the folder and the schemes and put the folder back.
+
+Somebody else should enter the same bus as Nadeen. We have her scheme now and know what she looks like. The first time we should probably just take note of what bus she takes. Waiting for a later one shouldn't raise suspisions. Next time somebody else should board the same bus and either just note where she gets off or follow her, depending on what the surroundings are like. When we know where she gets off, we can research the neigbourhood and perhaps wait for her at a suitable place. If she goes straíght home, getting to know the address shouldn't be too hard.
+
+Next step is to check what can be done at the house.
+
+---
+
+Sending someone in person is high-stake. One could have tried phishing for the address by a telephone call or perhaps other means. but the risk of getting caught would have been low. The people who helped the stand-in might hear that she never showed up in class, but even then they might think of it as an odd incident rather than a potential catastrophe to be reported.
+
+To carry out such an attack, it is important to know what people will be expected at a certain site. For what reasons are outsiders expected to visit the facilities? In what capacities do people not known from before have reason to be around? Are cleaners and servicemen from a certain company? How do they dress? Is there a limited pool? Can you be sent there with limited experience of the job and limited knowledge of the site? Much of this can be obseved without visiting sensitive areas.
+
+For servicemen and cleaners, many institutions have the problem that they have replaced in-house personnel, which often felt being part of the working community, with service firms employing people on low wages and not too good other terms, which means high turnover, variability of persons in the role and little solidarity with the employer. The former means it is relatively easy to get employed at the company and get sent to the facilities to be targeted (or to pose as having been), the latter that getting the employee to tell too much or do something they shouldn't do is relatively easy.
+
+Policies that are socially unacceptable work against themselves. Keeping too many doors closed or restricting keys both make people open doors also to people who should not be around - as it is common that people who need access don't have the keys. In this case, although doors should be locked and only known people let in, you cannot lock the door in front of one of many entering, and even by herself, you cannot leave a stand-in in the cold for checking up on whether she should be there, when the person in charge can be busy with other things and the relevant lists may not be up to date. Even making a call to check is infeasible if you only have a few minutes to go before your lesson.
+
+Having too much high-tech installed is a risk. Are the screens planned to be resistant to somebody with physical access? They have to be usable for a large range of uses by many people, so restrictions need to be very well thought-out. Do the people responsible for the school's IT security have those screens at their list of equipment to oversee, or is that assumed to be done by the supplier? Even security equipment, such as surveillance cameras seem to be planned without much thoughts about security.
+
+
 ## **Task 2:**  Pretexting, prompt engineering and phishing
 
 As the last exercise assignment of the course, you need to try to perform a social engineering attack in the form of a credible phishing message. 
@@ -58,6 +93,11 @@ Workstation 2:
 3. What kind of attack vectors can you identify and what other observations can you make from these snapshots?
 
 > Pay attention to all the details. Everything can matter. You also need them in the following task!
+
+- Apparently Workstation 1 is used by a PEN tester or somebody responsible for cybersecurity. A Cisco vulnerability shouldn'ẗ concern most normal employees. Is the form for a water plant? Is that what this facility is about? (I assume detials were present on the screen although redacted at the screenshot.) Their laptop seems to run Parrot OS, a Debian-based distribution for PEN testing and related tasks, the desktop might use the same OS; there is the Parrot Terminal, a web browser and a spreadsheet program.
+- The user of Workstation 2 (seems to be Windows) seems not to care about computer security, as they have passwords on post-it notes, similar passwords for different systems and simple passwords even for database administration. The passwords and user names should be noted for later use. Neither do they seem sophisticated in computer use, as "java update" seems to be an unfamiliar concept. However, they seem to do account management for the local Autodesk platform and to need admin access to a database. They seem to use Spotify, YouTube and Twitter, and CNN, Zoom and a weather service, probably checking them regularly. They use Outlookby web interface  (why does the tab name contain maksuto[n]?). This seems to be a good target. Thsy left their login-card in place (were they sitting there?). This is probably needed for local 2FA. What is the adding halfs, getting results that don't even match? They use Windows in Finnish, which probably is site policy – they make notes in English. Alice A and Bob B could be persons to tell about, perhaps worth some research (English names at a Finnish firm, Finnish phone numbers).
+
+- Some phishing attack on the user of Workstation 2 seems to be the way to go
 
 ### **Task 2B)** Prompt engineering
 
