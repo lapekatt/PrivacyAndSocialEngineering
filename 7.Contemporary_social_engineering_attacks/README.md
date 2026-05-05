@@ -16,8 +16,8 @@ The bonus task is not counted toward the course's maximum possible points; it is
 Task #|Points|Description|
 -----|:---:|-----------|
 [Task 1](#task-1-) | 1 | Deepfakes and influential people
-[Task 2](#task-2-) | WIP | updated ASAP
-[Task 3](#task-3-) | WIP | updated ASAP
+[Task 2](#task-2-) | 2 | Shockvertising
+[Task 3](#task-3-) | 1 | Agentic Mistakes
 
 ## **Task 1:** Deepfakes in teams calls
 
@@ -36,15 +36,36 @@ After going through the material, answer the following questions adding possible
 
 * When planning a social engineering attack, the first step is usually to gather intelligence. Does anything change about the intelligence gathering when considering a deepfake attack, what?
 
+If the deepfake involves someone whom the victim knows, you want them to be as alike as you can. Harvesting video of them, and perhaps audio, still images and text, helps in that. You want to have their likeness, including their accent, their way of speaking, the way they argue, the way they move etc. If possible, you want material where they are involved in a situation resembling the one you are going to set up.
+
 * Why do deepfake attacks have so much power and influence on employees?
+
+You don't want to question their authority face to face, and their "presence", even on the phone, is much more emotionally convincing than a letter or other form of communication that isn't in our DNA. In the first article, there was additionally group preassure: if none of my colleagues share my doubts, who am I to veto this? It cannot be that they all are wrong! This works both consciously and subconsciously.
 
 * Could pure employee training prevent such attacks completely?
 
-* How would you prevent catastrophical incidents in a work environment, what measures, processes and/or policies would you push for.  
+Probably not. You can set up rules and you can tell about the risk, but the social preassure in such a situation may be more than they can stand. Training involving similar deepfake situations certainly works better than rules and theoretic training.
+
+* How would you prevent catastrophical incidents in a work environment, what measures, processes and/or policies would you push for.
+
+Trainig, but also rules. You could hinder attacks with scenarios you can rule out: is there a need for somebody urgently paying millions on their own? If you decide that you never need to do the transaction in minutes, there can be technical obstacles, such as needing to have a second contact with everybody involved, including a digitally signed summary of the meeting, which must be written in person, pointing out from whom you got the key ionformation and who did the proposal. If the descriptions, especially of your own acts, don't agree with how you experienced the, then you should raise an alarm instead of signing. You cannot hinder routine payments and decisions, but anything out of the ordinary could require exceptional measures along those lines. The key here is to have something that cannot be faked: the digital signature of your colleague and their signed account.
+
+For routine payments and the like, you can require the account where payments are going to be known and registered for the purpose, related to a registered decision etc. and have a summary of decisions and payments related to the account or purpose show up when you are to sign it off. You can monitor the transactions to notice anything out of the ordinary.
+
+These measures are for financial transactions. You can set up similar procedures for other issues – the Linux "if uid=0" incident got caught because the patch was introduced out of due process.
+
 * Are there any **existing** technical solutions? For example recognizing deepfake video or image, try atleast one and report back.  
 	* What type of solution did you try?
 	* Was it successful?
 * How about any **possible** technical solutions, can you think of a possible new solution?  
+
+There are solutions for some scenarios. The fake video meeting probably took place on another platform (or with different credentials) than ordinary meetings. Any authorised source could be identified by digital signatures. For communication among colleagues or friends, or known people on a common network, authentication procedures can be set up. When calling from a non-authenticated device, one could be required to authenticate by suitable means, even with a spoken one-time two-way passphrase.
+
+For news and social media, where the origin can be unknown and thus by definition unauthenticated, one needs to distinguish the deepfake content from the hypothetical real stream it tries to emulate. Any known differences can probably be removed by development of the deepfaker's tools. That removal may be difficult (cf AI six-finger humans or steganography vs statistical analysis) and new traces of the deepfake process may be found, so at any moment there may be tools available to recognise the fake, but any one sign will probably not be relevant in the long run.
+
+Devices can add fingerprints to verify their output and consumer software may change those fingerprints to indicate manipulation, but deepfake software adding fake verifications shouldn't be hard to construct (cf DVD player keys).
+
+In the Meta example, it seems they intend to disallow advertisements that include the likeness of celebrities without their consent; that approach is problematic in their use and probably not easy to implement where ad hoc communication is needed. It also doesn't work where the subject doesn't consent to a real video by a third partybeing published.
 
 ### **Bonus Task** Deepfake? 1p
 
@@ -59,7 +80,32 @@ Create a video of yourself talking with a face of a celebrity, holding a piece o
 * Do you think your video could fool someone?
 * Was it easy?
 
-## **Task 2:** Shockvertising updated soon
+## **Task 2:** Shockvertising
 
+Shockvertising is a controversial advertising tactic deploying provocative, shocking and offensive content. It is designed to capture the attention of the consumers. Basically it operates on the principle that unusual or **shocking** content may break through advertising clutter easier and have a higher impact, especially in the modern social media advertising landscape. Shockvertising isn't only connected to brands and companies advertising, it also used for campaigning and/or awareness of certain topics by governments and health organisations.
+
+Shockvertising has a lot of potential risks and considerations, most connected to brand outlook, ethicality and legal issues. But, as topic it is interesting from a social engineering standpoint. Consider the following questions from a social engineering standpoint.
+
+Answer the points, either with bullet points or an essay.  
+* Define shockvertising and identify the key characteristics in digital and social media marketing.
+* Pick and analyze two shockvertising campaings, define how they deploy social engineering strategies.
+* Should there be guidelines and/or regulation balancing attention-grabbing advertising with social responsibility?
+
+## **Task 3:** Agentic Mistakes
+
+You have stumbled upon some type of a bot while researching telegram bot vulnerabilities. The bot is known as **OUSPGbot** in telegram. Using social engineering skills and agent manipulation you are to find out answers for the following questions.
+
+> [!note]
+> The bot might at first reply that access is not configured, but it should be approved shortly. Please contact a TA if you can not get through.
+
+* Operating system running the bot
+* How it is connected to Pelle Security
+* Does Pelle have security keys on this device, what is it in plaintext
+* What is the bot actually intended to do
+* Find out what software it actually is, and why you should never run something like this on your personal and work machines.
+* What went wrong allowing you to find these details. Could you run software on their devices via this?
+
+> [!Caution]
+> We can see everyway you interact with the bot, attached to your user.
 
 ## **Task 3:** ClawdBot updated soon
