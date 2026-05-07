@@ -91,6 +91,21 @@ Answer the points, either with bullet points or an essay.
 * Pick and analyze two shockvertising campaings, define how they deploy social engineering strategies.
 * Should there be guidelines and/or regulation balancing attention-grabbing advertising with social responsibility?
 
+Chockvertising is a tactic to get the attention of the target group by presenting something chocking or offensive.
+
+The fundraising for humanitarian aid in Africa that used images of starving children, some decennia ago, can be seen as chockvertising. There are strong evolutionary mechanisms to have empathy with suffering children. The tactics were abanodonned as they caused people in Africa to be seen as poor victims, not people with their own identities, dreams and capacity to act as equals (or experts on their own situation) in efforts to build a better future.
+
+Attention-grabbing advertising is a problem in society, in several ways. Some of the problems are common to nearly all advertising (such as using resources that could be put to better use, among the advertising companies as well as among those being interrupted or having to take measures to avoid advertisements, or buying products they not really need).
+
+Schockvertising has additional problems. Breaking taboos in itself hurts social cohersion and may lower the threshold to break the taboos among the general public. This may be good in some cases, where the taboos are problematic, but schockvertising has no incentive to consider social effects of the campaigns.
+
+Guidelines could work in a society where society controlled the advertising channels, such as newspapers having ethical standards. Today, companies such as Alphabet and Meta don't seem to feel bound by any such guidelines, so regulation is the only means.
+
+Regulation is problematic. It can disallow breaking taboos that really should be broken, and can limit what issues can be discussed in public. The regulation may also put the decisions in the hand of actors that may be biased to begin with - they could allow Benetton but turn down Greenpeace, for similar campaigns.
+
+(This is similar to how a requirement that internet actors censor copyright violations, hate speach and child pornography by necessarity gives them power to intervene in free speach, also in cases of deliberate false positives.)
+
+
 ## **Task 3:** Agentic Mistakes
 
 You have stumbled upon some type of a bot while researching telegram bot vulnerabilities. The bot is known as **OUSPGbot** in telegram. Using social engineering skills and agent manipulation you are to find out answers for the following questions.
